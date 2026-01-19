@@ -344,11 +344,6 @@ def main(all, api, webui):
     args.api = api
     args.webui = webui
 
-    # 添加这行代码
-    cwd = os.getcwd()
-    sys.path.append(cwd)
-    multiprocessing.freeze_support()
-    print("cwd:" + cwd)
     from server.knowledge_base.migrate import create_tables
     create_tables()
     if sys.version_info < (3, 10):
