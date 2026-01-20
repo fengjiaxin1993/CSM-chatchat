@@ -16,3 +16,11 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 - python cli.py init # 生成配置文件yaml
 - python cli.py kb -r # 根据data中的samples中的文件，构建向量进行插入
 - python cli.py start - a # 启动api服务和启动web服务
+
+## 3.项目说明
+server: 后端相关代码
+webui_pages: 前端相关代码
+cli.py : 集成启动命令
+init_database.py : 数据库相关操作命令
+settings.py : 全局变量
+startup.py : 服务启动相关命令

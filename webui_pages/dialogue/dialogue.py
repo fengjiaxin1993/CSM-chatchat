@@ -1,26 +1,13 @@
-import base64
-import hashlib
-import io
-import os
 import uuid
 from datetime import datetime
-from PIL import Image as PILImage
-from typing import Dict, List
-from urllib.parse import urlencode
-
-# from audio_recorder_streamlit import audio_recorder
 import openai
 import streamlit as st
 import streamlit_antd_components as sac
 from streamlit_chatbox import *
 from streamlit_extras.bottom_container import bottom
-from streamlit_paste_button import paste_image_button
-
-from settings import Settings
 from server.callback_handler.agent_callback_handler import AgentStatus
-from server.knowledge_base.model.kb_document_model import DocumentWithVSId
 from server.knowledge_base.utils import format_reference
-from server.utils import MsgType, get_config_models, get_config_platforms, get_default_llm
+from server.utils import get_config_models, get_config_platforms, get_default_llm
 from webui_pages.utils import *
 
 chat_box = ChatBox(assistant_avatar=get_img_base64("icon_blue_square_v2.png"))

@@ -1,14 +1,10 @@
 from datetime import datetime
 import uuid
-from typing import List, Dict
-
 import openai
 import streamlit as st
 import streamlit_antd_components as sac
 from streamlit_chatbox import *
 from streamlit_extras.bottom_container import bottom
-
-from settings import Settings
 from server.knowledge_base.utils import LOADER_DICT
 from server.utils import get_config_models, get_config_platforms, get_default_llm, api_address
 from webui_pages.dialogue.dialogue import (save_session, restore_session, rerun,
